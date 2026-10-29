@@ -1,0 +1,41 @@
+body{
+    background-color:azure;
+}
+header{
+    margin: 20px;
+    background-color: rgb(87, 87, 245);
+    border-radius: 5px;
+    padding: 20px;
+
+    
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav  a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+
+nav a:hover{
+    color: aqua;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+     background-color: rgb(87, 87, 245);
+    color: white;
+    border-radius: 5px;
+}

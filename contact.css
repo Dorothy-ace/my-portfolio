@@ -1,0 +1,37 @@
+
+.doro{
+    background-color: rgb(238, 232, 232);
+    border-radius: 10px;
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+    margin: 20px auto;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    color: rgb(36, 36, 145);
+    text-align: center;
+}
+
+input[type="name"],
+input[type="email"],
+textarea{
+    border: 1px solid rgb(120, 121, 122);
+    border-radius: 5px;
+}
+
+label{
+    color: rgb(104, 140, 211);
+
+}
+
+.btn{
+    background-color: rgb(36, 36, 145);
+    color:white;
+    border-radius: 5px;
+}

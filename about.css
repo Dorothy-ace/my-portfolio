@@ -1,0 +1,62 @@
+
+h2 {
+    color: rgb(14, 14, 17);
+    border-bottom: 2px solid dodgerblue;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+h3 {
+    color: darkslategrey;
+}
+
+
+a {
+    color: rgb(9, 9, 10);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid lightgrey;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: dodgerblue;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: dimgrey;
+}
+
+
+blockquote {
+    background-color: white;
+    border-left: 5px solid dodgerblue;
+    margin: 1.5em 0;
+    padding: 10px 20px;
+    font-style: italic;
+}
+
+
+iframe {
+    max-width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
+

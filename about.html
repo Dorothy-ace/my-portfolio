@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <li><a href="index.html">Home</a></li>
-             <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 <h2>My hobbies</h2>
@@ -59,62 +61,9 @@
   </section>
 
   
-  <section id="code-showcase">
-    <h2>Code Snippet Showcase</h2>
-    <p>Here is an example of structured problem solving in Python:</p>
-    
-    <pre><code>def calculate_growth(initial_value, rate, steps):
-    """Calculates step-by-step exponential growth."""
-    results = []
-    for t in range(steps):
-        val = initial_value * ((1 + rate) ** t)
-        results.append(round(val, 2))
-    return results
-
-print(calculate_growth(100, 0.05, 5))</code></pre>
-  </section>
 
   
-  <section id="learning-notes">
-    <h2>Learning Notes & Status</h2>
-    <p>
-      My current focus is on mastering <mark>HTML AND CSS </mark>. 
-      I have completed <del>database</del> <ins>full-stack project integrations</ins>.
-    </p>
-    <p>
-      Mathematical notation example: <i>x</i><sup>2</sup> + <i>y</i><sup>2</sup> = <i>z</i><sup>2</sup>, 
-      and chemical notation: H<sub>2</sub>O.
-    </p>
-  </section>
-
-  
-  <section id="featured-image">
-    <h2>Featured Project Visual</h2>
-    <figure>
-      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800" alt="Laptop showing code on a workspace desk" style="max-width:100%; height:auto; border-radius:6px;">
-      <figcaption>Figure 1: Developing responsive applications and data pipelines on Visual Studio Code.</figcaption>
-    </figure>
-  </section>
-
-  
-  <section id="media-showcase">
-    <h2>Media Highlights</h2>
-    
-    <h3>Audio Overview</h3>
-    <audio controls>
-      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-
-    <h3>Video Presentation</h3>
-    <video controls width="100%" poster="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800" style="border-radius:6px;">
-      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      Your browser does not support the video element.
-    </video>
-  </section>
-
-  
-  <section id="location-and-video">
+  <section id="location">
     <h2>Location & Featured Video</h2>
     
     <h3>Location: Kakamega, Kenya</h3>
@@ -123,27 +72,6 @@ print(calculate_growth(100, 0.05, 5))</code></pre>
       </iframe>
     </div>
 
-    <h3>Featured YouTube Video</h3>
-    <div class="iframe-container">
-      <iframe 
-        src="https://www.youtube.com/embed/mU6anWqZJcc" 
-        title="HTML & CSS FULL COURSE" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-    </div>
-
-     <h3>My Javascript Learning Resources</h3>
-    <div class="iframe-container">
-      <iframe 
-        src="https://www.youtube.com/embed/PkZNo7MFNFg" 
-        title="Learn Javascript Full course" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-
-    </div>
-  </section>
 
   
   <section id="reading-timeline">
