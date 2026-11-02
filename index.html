@@ -4,30 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-portfolio</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            violet: '#8b5cf6',
+                            indigo: '#6366f1',
+                            emerald: '#10b981',
+                            dark: '#0f172a',
+                            card: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/jpeg" href="Doro6.jpg">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <img src="image/hero.jpg" alt="my picture">
-
-        <nav>
+<body class="min-h-screen flex flex-col selection:bg-brand-violet selection:text-white">
+    
+     <header class="header">
+        <div class="container nav-container">
+             <img src="image/hero.jpg" alt="my picture">
+                
+             <nav>
+            <ul class="nav-links"></ul>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-        <nav>
-         
+           </ul>
+             <a href="https://github.com/Dorothy-ace" target="_blank" rel="noopener" class="nav-btn">
+                GitHub ↗
+             </a>
+        </nav>
+        
+        </div>
+       
     </header>
-    
     <main>
         <p><marquee behavior="scroll" direction="left">Welcome to my page — Future Developer & Computer Science Student</marquee></p>
         <h1>Hello, I'm Golden Dorothy</h1>
-    </main>
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+               
+            </h1>
+             <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+               
+            <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span> Open for CS Internships & Tech Collaborations
+                </div>
+
+                <h1 class="hero-title">
+                    Building robust systems with <span class="gradient-text">code & logic.</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Computer Science Student, Full-Stack Developer & Security Enthusiast.
+                </p>
+
+                <p class="hero-description">
+                    Focused on crafting efficient web applications, mastering algorithms and data structures, exploring DevSecOps workflows, and applying mathematical principles to software architecture.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        View Work & Projects ↓
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        
+        
+       
+            
+            
+           
+            
+           
 
     
     <footer>
         &copy; 2026 my-portfolio
     </footer>
+
+    <script>
+        // Set dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Auto close mobile menu when clicking nav links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Submission logic (no page reload)
+        const contactForm = document.getElementById('contact-form');
+        const formAlert = document.getElementById('form-alert');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            
+            // Show success message container
+            formAlert.classList.remove('hidden', 'bg-red-500/20', 'text-red-300', 'border', 'border-red-500/30');
+            formAlert.classList.add('bg-emerald-500/20', 'text-emerald-300', 'border', 'border-emerald-500/30');
+            formAlert.textContent = `Thank you, ${name}! Your message has been sent successfully.`;
+
+            // Reset form
+            contactForm.reset();
+
+            // Clear alert after 5 seconds
+            setTimeout(() => {
+                formAlert.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
 </body>
 </html>

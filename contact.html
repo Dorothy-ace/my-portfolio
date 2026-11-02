@@ -4,17 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            violet: '#8b5cf6',
+                            indigo: '#6366f1',
+                            emerald: '#10b981',
+                            dark: '#0f172a',
+                            card: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Inter Font -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#hero" class="brand-logo">
+                Dorothy<span class="dot"></span><span class="mono" style="color: var(--text-muted); font-size: 0.875rem; font-weight: 400;">/dev</span>
+            </a>
+             <nav>
+            <ul class="nav-links"></ul>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
+           </ul>
+             <a href="https://github.com/Dorothy-ace" target="_blank" rel="noopener" class="nav-btn">
+                GitHub ↗
+             </a>
         </nav>
+        
+        </div>
+       
     </header>
+    
+     <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <!span class="section-tag">Get in Touch</span>
+                    <h2 class="section-title">Let's Connect</h2>
+                </div>
+
+                <div class="card contact-card">
+                    <div class="contact-info">
+                        <div>
+                            <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Contact Information</h3>
+                            <p>
+                                I am actively seeking internship opportunities, software engineering projects, and open-source collaborations. Drop a message or find me on my networks.
+                            </p>
+
+                            <div class="contact-details">
+                                <a href="https://github.com/Dorothy-ace" target="_blank" rel="noopener" class="contact-method">
+                                    <div class="contact-icon">GH</div>
+                                    <div class="contact-method-text">
+                                        <span>GitHub</span>
+                                        <strong>github.com/Dorothy-ace</strong>
+                                    </div>
+                                </a>
+
+                                <div class="contact-method">
+                                    <div class="contact-icon">@</div>
+                                    <div class="contact-method-text">
+                                        <span>Email</span>
+                                        <strong>dorothy.dev@gmail.com</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
     
     <div class="doro">
         
@@ -40,5 +117,48 @@
     <footer>
         &copy; 2026 my-portfolio
     </footer>
+    <script>
+        // Set dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Auto close mobile menu when clicking nav links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Submission logic (no page reload)
+        const contactForm = document.getElementById('contact-form');
+        const formAlert = document.getElementById('form-alert');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            
+            // Show success message container
+            formAlert.classList.remove('hidden', 'bg-red-500/20', 'text-red-300', 'border', 'border-red-500/30');
+            formAlert.classList.add('bg-emerald-500/20', 'text-emerald-300', 'border', 'border-emerald-500/30');
+            formAlert.textContent = `Thank you, ${name}! Your message has been sent successfully.`;
+
+            // Reset form
+            contactForm.reset();
+
+            // Clear alert after 5 seconds
+            setTimeout(() => {
+                formAlert.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
