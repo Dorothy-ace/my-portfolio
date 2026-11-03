@@ -21,6 +21,26 @@ header{
     
 
     }
+     .link-card {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .link-card:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+    .github { background-color: #24292e; }
+    .instagram { background-color: #E1306C; }
+    .whatsapp { background-color: #25D366; }
+    .portfolio { background-color: #3b82f6; }
 
 nav{
     display: flex;
@@ -291,7 +311,7 @@ footer {
 
         
         .section {
-            padding: 6rem 0;
+            padding: 50px;
         }
 
         .section-header {
